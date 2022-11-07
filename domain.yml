@@ -1,0 +1,511 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- abgabefrist:
+    use_entities: true
+- ablauf_sprechstunde:
+    use_entities: true
+- affirm:
+    use_entities: true
+- alle_ergebnisse_anzeigen:
+    use_entities: true
+- anmeldefrist:
+    use_entities: true
+- anmeldung:
+    use_entities: true
+- anmeldung_sprechstunde:
+    use_entities: true
+- anmeldung_und_link_zoom:
+    use_entities: true
+- ansprechpartner:
+    use_entities: true
+- ansprechpartner_schmidt:
+    use_entities: true
+- ausleihen_medien:
+    use_entities: true
+- austausch:
+    use_entities: true
+- austauschforum:
+    use_entities: true
+- beantwortung_allgemeiner_fragen:
+    use_entities: true
+- bedeutung_tegodi:
+    use_entities: true
+- bedingung_sprechstunde:
+    use_entities: true
+- bewertung_selbstlernmaterialien:
+    use_entities: true
+- blog:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- datum_uhrzeit:
+    use_entities: true
+- deny:
+    use_entities: true
+- ein_stern:
+    use_entities: true
+- ergebnisse_suche_selbstlernmaterialien_ja:
+    use_entities: true
+- etcs:
+    use_entities: true
+- fachauswahl:
+    use_entities: true
+- fristen:
+    use_entities: true
+- geschlecht:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- hilfe_im_Projekt:
+    use_entities: true
+- ja_zu_format:
+    use_entities: true
+- kalender:
+    use_entities: true
+- kein_format:
+    use_entities: true
+- keine_weiteren_fragen:
+    use_entities: true
+- kompetenzen:
+    use_entities: true
+- leitung_sprechstunde:
+    use_entities: true
+- lernbegleitung:
+    use_entities: true
+- mars:
+    use_entities: true
+- mit_dem_format:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- moopaed_kurs:
+    use_entities: true
+- naechste_sprechstunde:
+    use_entities: true
+- name:
+    use_entities: true
+- news:
+    use_entities: true
+- nicht_alle_ergebnisse_anzeigen:
+    use_entities: []
+- nlu_fallback:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- problem_allgemein:
+    use_entities: true
+- query_datebase:
+    use_entities: true
+- selbstlernmaterialien_suche:
+    use_entities: true
+- sonst_keine_fragen_mehr:
+    use_entities: true
+- sprechstunde:
+    use_entities: true
+- sprechstunde_teilnehmeranzahl:
+    use_entities: true
+- suche_eingrenzen_anhand_format:
+    use_entities: true
+- suche_eingrenzen_anhand_kompetenz:
+    use_entities: true
+- suche_eingrenzen_anhand_themenbereiche:
+    use_entities: true
+- suche_eingrenzen_anhand_wissensgebiet:
+    use_entities: true
+- suche_eingrenzen_welche_kompetenz:
+    use_entities: true
+- suche_eingrenzen_welche_themenbereiche:
+    use_entities: true
+- suche_eingrenzen_welches_format:
+    use_entities: true
+- suche_nach_filter_format:
+    use_entities: true
+- suche_nach_wissensgebiet:
+    use_entities: true
+- suche_selbstlernmaterialien:
+    use_entities: true
+- technische_probleme:
+    use_entities: true
+- ted_aufgaben:
+    use_entities: true
+- ted_begeisterung:
+    use_entities: true
+- ted_interessen:
+    use_entities: true
+- teilnahme:
+    use_entities: true
+- veranstaltungen:
+    use_entities: true
+- voraussetzung:
+    use_entities: true
+- vorbereitung_sprechstunde:
+    use_entities: true
+- was_ist_ted_wichtig:
+    use_entities: true
+- ja_ich_moechte_bewerten:
+    use_entities: true
+- welches_Selbstlernmaterial_bewerten:
+    use_entities: true
+- ich_moechte_nicht_bewerten:
+    use_entities: true
+- wie_alt:
+    use_entities: true
+- wo_sprechstunde:
+    use_entities: true
+- zeige_mir_moegliche_filter:
+    use_entities: true
+- zeige_mir_moegliche_wissensgebiete:
+    use_entities: true
+- ziel_lehrprojekt:
+    use_entities: true
+- ziel_medienentwicklungsprojekt:
+    use_entities: true
+- ziel_projekt_allgemein:
+    use_entities: true
+- suche_nicht_eingrenzen:
+    use_entities: true
+- wer_ist_für_welchen_bereich_verantwortlich:
+    use_entities: true
+- warum_name_ted:
+    use_entities: true
+entities:
+- resource_format
+- resource_wissensgebiet
+- resource_kompetenz
+- resource_themenbereich
+- resource_topic
+- ask_titel_selbstlernmaterial
+- bewertung_in_sterne
+slots:
+  resource_wissensgebiet:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  resource_format:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  resource_kompetenz:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  resource_themenbereich:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  bewertung_in_sterne:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  ask_titel_selbstlernmaterial:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  titel_selbstlernmaterial:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_name:
+  - text: Mein Name ist Ted! Und deiner?
+  warum_name_ted:
+  - text: Gute Frage. Nun ja, irgendwann hat mir mal jemand den Namen gegeben. Und ich finde, der Name passt eigentlich ganz gut :)
+  utter_wie_alt:
+  - text: Nunja, schwierig zu sagen. Zumindest kann ich dir sagen, dass es mich seit dem Sommer 2022 gibt.
+  utter_geschlecht:
+  - text: Ich bin mir nicht sicher, ob ein Chatbot ein Geschlecht haben kann. Doch ist das von Relevanz für dich?
+  utter_ted_aufgaben:
+  - text: Grundsätzlich bin ich dazu da, dich und alle Studierenden die am Projekt TEgoDi teilnehmen zu unterstützen. Dabei unterstütze ich bei allgemeine Fragen und bei der Suche nach Selbstlernmaterialien.
+  utter_ted_interessen:
+  - text: Digitalisierung ist meine Leidenschaft. Deshalb versuche ich mich in diesem Bereich stetig weiterzubilden und mein Wissen weiterzugeben.
+  utter_was_ist_ted_wichtig:
+  - text: Wenn ich darüber nachdenke, glaube ich, dass mir vor allem die Unterstützung der Studierenden aus dem Projekt TEgoDi wichtig ist. Was ist den dir wichtig?
+  utter_ted_begeisterung:
+  - text: Mich begeistert alles, was mit Digitalisierung, Bildung und Projektmanagement zu tun hat. Deshalb versuche ich auch hier mein Wissen weiterzugeben.
+  utter_ask_rephrase:
+  - text: Es tut mir leid, leider habe ich dich nicht verstanden. Könntest du deine Eingabe nochmals wiederholen?
+  utter_default:
+  - text: Es tut mir leid, ich kann dir da leider nicht weiterhelfen.
+  utter_weiter_weiterhelfen:
+  - text: Hast du eine weitere Frage an mich oder kann ich dich bei der Suche nach Selbstlernmaterialien unterstützen?
+  utter_keine_weiteren_fragen:
+  - text: Alles klar. Falls du nochmals Hilfe benötigst, stehe ich dir jederzeit zu Verfügung.
+  - text: Ok. Aber ich stehe dir jederzeit zur Verfügung.
+  utter_weitere_frage:
+  - text: Hast du noch eine weitere Frage zum Projekt?
+  - text: Hast du sonst noch eine Frage?
+  - text: Kann ich dir sonst noch irgendwie weiterhelfen?
+  utter_beantwortung_allgemeiner_fragen:
+  - text: Stell mir deine Frage und ich werde versuchen diese zu beantworten.
+  - text: Wie kann ich dir den weiterhelfen?
+  - text: Stell mir deine Frage und ich versuche dir eine Antwort zu geben?
+  utter_problem_allgemein:
+  - text: Damit ich dir weiterhelfen kann müsstest du dein Problem etwas genauer beschreiben.
+  utter_fristen:
+  - text: 'Leider wurden die Fristen für Anmeldung und Abgabe der Projekte von der Projektleitung noch nicht festgelegt. Sollte es hierzu Neuigkeiten geben, findest du diese im TEgoDi-Blog unter: https://www.moopaed.de/moodle/mod/forum/view.php?id=428950'
+  utter_abgabefrist:
+  - text: Diesbezüglich warte ich selbst noch auf Informationen von der Projektleitung. Sollte es jedoch hierzu Neuigkeiten geben, wirst du es im Moopaed-Kurs erfahren.
+  utter_anmeldung:
+  - text: Leider gibt es derzeit hierzu noch keine genaueren Informationen. Sollte jedoch eine Regelung zu Anmeldung vom TEgoDi-Team ausgegeben werden, findest du dies zuerst auf der Moopaed-Seite zum Projekt.
+  utter_anmeldefrist:
+  - text: 'Leider wurden die Fristen für Anmeldung und Abgabe der Projekte von der Projektleitung noch nicht festgelegt. Sollte es hierzu Neuigkeiten geben, findest du diese zuerst im TEgoDi-Blog unter: https://www.moopaed.de/moodle/mod/forum/view.php?id=428950'
+  utter_wer_ist_für_welchen_bereich_verantwortlich:
+  - text: 'Innerhalb des Projektes stehen dir verschiedene Ansprechpartner zur Verfügung. Welche Mitarbeiter für welchen Bereich zuständig ist, erfährst du auf der PH Website unter: https://www.ph-weingarten.de/die-ph-weingarten/digitalisierung/tegodi/ueber-uns/'
+  utter_lernbegleitung:
+  - text: Verantwortlicher für die Lernbegleitung im Projekt ist Herr Schmidt, welche derzeit innerhalb der TEgoDi-Sprechstunde statt findet.
+  utter_ansprechpartner_schmidt:
+  - buttons:
+    - payload: /kontaktieren
+      title: Kontaktieren
+    text: Ansprechpartner für die Lernbegleitung ist Herrn Schmidt, den du telefonsich unter 0751 501 - 8209 oder per Mail "christian.schmidt@ph-weingarten.de" erreichen.
+  utter_technische_probleme:
+  - text: Bei technische Probleme steht dir das ZIMT, der IT-Helpdesk und die IT- & Medientechnik der Ph Weingarten zur Verfügung. Alle wichtigen Infos findest du dazu unter "https://informationszentrum.ph-weingarten.de/it-medientechnik/"
+  utter_hilfe_im_Projekt:
+  - text: 'Wenn du Unterstützung in einem der Medienprojekt benötigst, gibt es zwei Möglichkeiten: Zum einen kannst du im Moopaed-Kurs TEgoDi-Helpdesk einen Forumsbeitrag verfassen oder melde dich für die Sprechstunde des TEgoDi Projektes an.'
+  utter_austauschforum:
+  - text: Das Forum zum Austausch findest du im Mooaed-Kurs "TEgoDi-Helpdesk" unter Austausch & Vernetzung (https://www.moopaed.de/moodle/mod/forum/view.php?id=429025)
+  utter_austausch:
+  - text: Du hast die Möglichkeit, dich im Forum zum Projekt (Moopaed-Kurs TEgoDi-Helpdesk) auszutauschen oder in der Sprechstunde mit anderen über Schwierigkeiten in der Projektdurchführung zu sprechen.
+  utter_news:
+  - text: Aktuelle Informationen zum Projekt und rund ums digitale Lehren und Lernen findest du im Blog des TEgoDi-Helpdesk (https://www.moopaed.de/moodle/mod/forum/view.php?id=428950)
+  utter_veranstaltungen:
+  - text: Aktuelle Informationen zu anstehenden Veranstaltungen findest du im Veranstaltungskalender des Moopaed-Kruses TEgoDi-Helpdesk (https://www.moopaed.de/moodle/course/view.php?id=10386&section=1).
+  utter_blog:
+  - text: Um aktuelle Informationen rund um das Projekt zu erhalten, besuche den Blog im Moopaed-Kurs 'TEgoDi-Helpdesk' (https://www.moopaed.de/moodle/mod/forum/view.php?id=428950)
+  utter_kalender:
+  - text: Eine Übersicht über alle geplanten Veranstaltungen und Termine findest du im Moopaed-Kurs 'TEgoDi-Helpdesk' unter News und Termine (https://www.moopaed.de/moodle/course/view.php?id=10386&section=1)
+  utter_ziel_projekt_allgemein:
+  - text: Das Ziel des „Projektes Teacher Education goes Digital“ (TEgoDi) in aller Kürze ist die Vermittlung von Medienkompetenzen an Lehramtstudierenden für einen effektiven Umgang und Einsatz von Medien im Schulunterricht.
+  utter_ziel_lehrprojekt:
+  - text: HIER FEHLT NOCH DIE ANTWORT
+  utter_ziel_medienentwicklungsprojekt:
+  - text: HIER FEHLT NOCH DIE ANTWORT
+  utter_fachauswahl:
+  - text: Grundsätzlich kannst du in jedem Fach deine Projekte absolvieren. Solltest du dir jedoch nicht sicher sein, besuch doch einfach mal die TEgoDi-Sprechstunde.
+  utter_moopaed_kurs:
+  - text: Grundsätzlich findest du auf Moopaed den allgemeinen Kurs 'TEgoDi', als auch den Kurs 'TEgoDi-Helpdesk'.
+  utter_kompetenzen:
+  - text: TEgoDi hat das Ziel der Förderung und Entwicklung von medienpädagogischen sowie mediendidaktischen und medienfachdidaktischen Kompetenzen von Lehrenden und Studierenden.
+  utter_ausleihen_medien:
+  - text: Medien kannst du über das Mars der PH Weingarten ausleihen. Alle Infos die dazu benötigst, findest du auf der Homepage des Mars unter https://mars.ph-weingarten.de/
+  utter_mars:
+  - text: Wobei es sich bei 'Mars' handelt, wo du Mars findest, wann es geöffnet hat und wie das Ausleihen von Medien und Technik abläuft findest du auf folgender Webseite https://mars.ph-weingarten.de/
+  utter_bedeutung_tegodi:
+  - text: TEgoDi steht für 'Teacher Education goes Digital' und für die Digitaliserung Bildung, Schule und Unterricht.
+  utter_etcs:
+  - text: 'Das Projektteam und die Hochschule ist gerade dabei, die ECTS-Punkte für die Projekte festzulegen. Sobald es neue Informationen gibt, findest du diese auch im Moopaed-Kurs zum Projekt. Denn Kurs findest du unter:  https://www.moopaed.de/moodle/course/view.php?id=9117'
+  utter_teilnahme:
+  - text: Ja alle Studierenden der Sekundarstufe I und Lehramt Grundschule müssen die Projekte durchführen.
+  utter_keine_weiteren_Fragen:
+  - text: Alles klar. Falls du nochmal nach einem Selbstlernmaterial suchen solltest oder eine Frage zum Projekt hast, kannst du mir gerne jederzeit schreiben.
+  utter_sprechstunde:
+  - text: In einer regelmäßigen stattfindenden Sprechstunde hast du die Möglichkeit, sowohl von anderen Studierenden als auch einer Lernbegleitung Unterstützung zu bekommen. Für die Sprechstunde solltest du dich frühzeitig anmelden, da nur begrenzt Teilnehmer teilnehmen können.
+  utter_sprechstunde_teilnehmeranzahl:
+  - text: Um sicherzustellen, dass jeder Teilnehmer der Sprechstunde auch Unterstützung bekommt, ist die Sprechstunde auf 10 Teilnehmer begrenzt.
+  utter_leitung_sprechstunde:
+  - text: Die Leitung der Sprechstunde hat Herr Schmidt, Ansprechpartner für Lernbegleitung im Projekt TEgoDi.
+  utter_anmeldung_sprechstunde:
+  - text: Für die Sprechstunde solltest du dich anmelden. Das kannst du ganz einfach per Mail an 'christian.schmidt@ph-weingarten.de'
+  utter_bedingung_sprechstunde:
+  - text: Grundsätzlich gibt es keine Bedingungen für die Teilnahme. Jedoch solltest du dein Problem in maximal 5 Minuten präsentieren können, um mit den anderen in die Diskussion zu gehen.
+  utter_ablauf_sprechstunde:
+  - text: Grundsätzlich solltest du dich zunächst für die Sprechstunde anmelden. Im Austausch mit den anderen Studierenden wird dann eine Lösung für das gegebene Problem diskutiert.
+  utter_naechste_sprechstunde:
+  - text: Die Termine für die nächsten TEgoDI-Gruppensprechstunden findest du unter News & Termine im TEgoDi-Helpdesk (https://www.moopaed.de/moodle/course/view.php?id=10386)
+  utter_vorbereitung_sprechstunde:
+  - text: In der Anmeldung per Mail solltest mitteilen, an welcher Sprechstunde du teilnehmen möchtest sowie kurz dein Problem schildern. In der Sprechstunde solltest du dein Anliegen in maximal 5 Minuten schildern können.
+  utter_anmeldung_und_link_zoom:
+  - text: In deiner Anmeldung solltest du Herrn Schmidt kurz mitteilen, an welchem Termin du teilnehmen möchtest. Den Link zum Zoom-Meeting der Sprechstunde bekommst du dann per Mail zugesendet.
+  utter_wo_sprechstunde:
+  - text: Die Sprechstunde findet über Zoom statt. Sobald du dich für die Sprechstunde angemeldet hast, bekommst du den Zoom-Link zugesendet.
+  utter_suche_selbstlernmaterialien:
+  - buttons:
+    - payload: /zeige_mir_moegliche_wissensgebiete
+      title: Zeige mir mögliche Wissensgebiete
+    text: Gerne helfe ich dir bei der Suche nach Selbstlernmaterialien. Zu welchem Wissensgebiet suchst du Selbstlernmaterialien?
+  utter_moegliche_wissensgebiet:
+  - buttons:
+    - payload: /suche_nach_wissensgebiet{{"resource_wissensgebiet":"digitales Lehren und Lernen"}}
+      title: digitales Lehren und Lernen
+    - payload: /suche_nach_wissensgebiet{{"resource_wissensgebiet":"Grundlagen Mediendidaktik"}}
+      title: Grundlagen Mediendidaktik
+    - payload: /suche_nach_wissensgebiet{{"resource_wissensgebiet":"Datenschutz und Urheberrecht"}}
+      title: Datenschutz und Urheberrecht
+    - payload: /suche_nach_wissensgebiet{{"resource_wissensgebiet":"Technische Grundlagen und Tutorials"}}
+      title: Technische Grundlagen und Tutorials
+    - payload: /suche_nach_wissensgebiet{{"resource_wissensgebiet":"Beispiele aus dem Unterricht"}}
+      title: Beispiele aus dem Unterricht
+    - payload: /suche_nach_wissensgebiet{{"resource_wissensgebiet":"Projektmanagement"}}
+      title: Projektmanagement
+    text: 'Hier ein Überblick über verschiedene Wissensgebiet für Selbstlernmaterialien:'
+  utter_suche_eingrenzen_anhand_format:
+  - buttons:
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Online-Plattform"}}
+      title: Online-Plattform
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Tool"}}
+      title: Tool
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Plattform"}}
+      title: Plattform
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Video"}}
+      title: Video
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Lehrtext"}}
+      title: Lehrtext
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Moopaed-Kurs"}}
+      title: Moopaed-Kurs
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Website"}}
+      title: Website
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Moopaed-Kurs"}}
+      title: Tool
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Interaktive Lerneinheiten"}}
+      title: Interaktive Lerneinheiten
+    - payload: /suche_eingrenzen_welches_format{{"resource_format":"Software"}}
+      title: Software
+    text: Welches Format soll das Selbstlernmaterial haben?
+  utter_eingrenzung_der_suche:
+  - buttons:
+    - payload: /suche_eingrenzen_anhand_themenbereiche
+      title: Themenbereich
+    - payload: /suche_eingrenzen_anhand_kompetenz
+      title: Kompetenz
+    - payload: /suche_eingrenzen_anhand_format
+      title: Format
+    - payload: /suche_nicht_eingrenzen
+      title: Suche nicht eingrenzen
+    text: Damit ich das passende Selbstlernmaterial für dich finden kann, kann ich die Suche für dich weiter eingrenzen. Wähle eine der nachfolgenden Optionen aus um die Suche einzugrenzen. Du kannst aber auch ohne weiter Eingrenzung fortfahren.
+  utter_suche_eingrenzen_anhand_kompetenz:
+  - buttons:
+    - payload: /suche_eingrenzen_welche_kompetenz{{"resource_kompetenz":"Berufliches Engagement"}}
+      title: Berufliches Engagement
+    - payload: /suche_eingrenzen_welche_kompetenz{{"resource_kompetenz":"digitale Ressourcen"}}
+      title: digitale Ressourcen
+    - payload: /suche_eingrenzen_welche_kompetenz{{"resource_kompetenz":"Lehren und Lernen"}}
+      title: Lehren & Lernen
+    - payload: /suche_eingrenzen_welche_kompetenz{{"resource_kompetenz":"Assessment und Feedback"}}
+      title: Assessment & Feedback
+    - payload: /suche_eingrenzen_welche_kompetenz{{"resource_kompetenz":"Lernerorientierung"}}
+      title: Lernerorientierung
+    - payload: /suche_eingrenzen_welche_kompetenz{{"resource_kompetenz":"Förderung digitaler Kompetenzen"}}
+      title: Förderung digitaler Kompetenzen
+    text: 'Du kannst die Suche anhand der Kompetenzen des Kompetenzrasters eingrenzen. Wähle aus:'
+  utter_suche_eingrenzen_anhand_themenbreiche:
+  - buttons:
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Einsatz digitaler Medien im Unterricht"}}
+      title: Einsatz digitaler Medien im Unterricht
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"digitale Werkzeuge"}}
+      title: digitale Werkzeuge
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Datenschutz"}}
+      title: Datenschutz
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Erklärvideos"}}
+      title: Erklärvideos
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"interaktiver Unterrichtsmaterialien"}}
+      title: interaktiver Unterrichtsmaterialien
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Umfragewerkzeugn"}}
+      title: Umfragewerkzeug
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Whiteboards"}}
+      title: Whiteboards
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Audiproduktion"}}
+      title: Audioproduktion
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Bildbearbeitung"}}
+      title: Bildbearbeitung
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Programmierung"}}
+      title: Programmierung
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Unterrichtsmaterialien"}}
+      title: Unterrichtsmaterialien
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"digitale Projekte"}}
+      title: digitale Projekte
+    - payload: /suche_eingrenzen_welche_themenbereich{{"resource_themenbereich":"Grundlagen Mediendidaktik"}}
+      title: Grundlagen Mediendidaktik
+    text: 'Du kannst deine Suche anhand folgende Themenbereiche eingrenzen:'
+  utter_bitte_um_bewertung:
+  - buttons:
+    - payload: /ja_ich_moechte_bewerten
+      title: Ja
+    - payload: /ich_moechte_nicht_bewerten
+      title: Nein Danke
+    text: Ich hoffe ich konnte dir weiterhelfen. Mich würde es freuen, du könntest eines der Selbstlenrmaterialien bewerten. Möchtest du eines der Selbstlernmaterialien bewerten?
+  utter_ich_moechte_nicht_bewerten:
+  - text: Das ist schade aber ok. Vielleicht das nächste Mal:) Wie kann ich dir noch weiterhelfen?
+  utter_titel_selbstlernmaterial:
+  - text: Gib den Titel des Selbstlernmaterials ein, welches du bewerten möchtest.
+  utter_ask_bewertung_in_sterne:
+  - buttons:
+    - payload: /bewertung_selbstlernmaterialien{{"bewertung_in_sterne":"1"}}
+      title: ★
+    - payload: /bewertung_selbstlernmaterialien{{"bewertung_in_sterne":"2"}}
+      title: ★★
+    - payload: /bewertung_selbstlernmaterialien{{"bewertung_in_sterne":"3"}}
+      title: ★★★
+    - payload: /bewertung_selbstlernmaterialien{{"bewertung_in_sterne":"4"}}
+      title: ★★★★
+    - payload: /bewertung_selbstlernmaterialien{{"bewertung_in_sterne":"5"}}
+      title: ★★★★★
+    text: Auf einer Skala von 1 bis 5 Sterne, wie würdest du das Selbstlernmaterial bewerten?
+  utter_vielen_dank_bewertung:
+  - text: Vielen Dank für deine Bewertung. Nur so kann ich aus jedem Gespräch lernen und mich verbessern.
+  utter_noch_eine_frage_beantworten:
+  - text: Kann ich dir noch eine Frage beantworten?
+  utter_alle_ergebnisse_anzeigen:
+  - buttons:
+    - payload: /alle_ergebnisse_anzeigen
+      title: Alle Ergebnisse anzeigen
+    text: Möchtest du alle Ergebnisse ansehen?
+actions:
+- action_default_fallback
+- action_default_mail_colilab
+- action_begruessung_user
+- action_query_datebase
+- action_query_database_ohne_eingrenzung
+- action_query_datebase_alle_Ergebnisse_anzeigen
+- action_konversation_sichern
+- bewertung_sterne_in_csv_ubertragen
+- utter_bestimmtes_format
+- utter_ergebnis_suche_selbstlernmaterialien
+- utter_moegliche_themen
+- utter_suche_selbstlernmaterialien
+- action_query_ohne_eingrenzung
+forms:
+  query_datebase:
+    required_slots:
+      resource_wissensgebiet:
+      - entity: resource_wissensgebiet
+        type: from_entity
+  query_database:
+    required_slots:
+      resource_format:
+      - entity: resource_format
+        type: from_entity
+  action_query_datebase:
+    required_slots:
+      resource_format:
+      - entity: resource_wissensgebiet
+        type: from_entity
+  form_bewertung_selbstlernmaterial:
+    required_slots:
+      bewertung_in_sterne:
+      - entity: bewertung_in_sterne
+        type: from_text
+      titel_selbstlernmaterial:
+      - entity: ask_titel_selbstlernmaterial
+        type: from_text
+e2e_actions: []

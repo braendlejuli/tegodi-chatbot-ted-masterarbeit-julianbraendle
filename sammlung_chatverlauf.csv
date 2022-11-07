@@ -1,0 +1,21 @@
+intent;benutzereingabe;entity_name;entity_value;titel_ausgegebenener_action;antwort_chatbots
+greet;hi;;suche_selbstlernmaterialien;selbstlernmaterialien;;utter_suche_selbstlernmaterialien;Gerne helfe ich dir bei der Suche nach Selbstlernmaterialien. Zu welchem Wissensgebiet suchst du Selbstlernmaterialien?
+zeige_mir_moegliche_wissensgebiete;/zeige_mir_moegliche_wissensgebiete;;utter_moegliche_wissensgebiet;Hier ein Überblick über verschiedene Wissensgebiet für Selbstlernmaterialien:
+suche_nach_wissensgebiet;/suche_nach_wissensgebiet{"resource_wissensgebiet":"Grundlagen Mediendidaktik"};resource_wissensgebiet;Grundlagen Mediendidaktik;utter_eingrenzung_der_suche;Damit ich das passende Selbstlernmaterial für dich finden kann, kann ich die Suche für dich weiter eingrenzen. Wähle eine der nachfolgenden Optionen aus um die Suche einzugrenzen. Du kannst aber auch ohne weiter Eingrenzung fortfahren.
+suche_nicht_eingrenzen;/suche_nicht_eingrenzen;;utter_alle_ergebnisse_anzeigen;Möchtest du alle Ergebnisse ansehen?
+restart;/restart;;greet;hi;;suche_selbstlernmaterialien;selbstlernmaterialien;;utter_suche_selbstlernmaterialien;Gerne helfe ich dir bei der Suche nach Selbstlernmaterialien. Zu welchem Wissensgebiet suchst du Selbstlernmaterialien?
+zeige_mir_moegliche_wissensgebiete;/zeige_mir_moegliche_wissensgebiete;;utter_moegliche_wissensgebiet;Hier ein Überblick über verschiedene Wissensgebiet für Selbstlernmaterialien:
+suche_nach_wissensgebiet;/suche_nach_wissensgebiet{"resource_wissensgebiet":"Grundlagen Mediendidaktik"};resource_wissensgebiet;Grundlagen Mediendidaktik;utter_eingrenzung_der_suche;Damit ich das passende Selbstlernmaterial für dich finden kann, kann ich die Suche für dich weiter eingrenzen. Wähle eine der nachfolgenden Optionen aus um die Suche einzugrenzen. Du kannst aber auch ohne weiter Eingrenzung fortfahren.
+suche_eingrenzen_anhand_format;/suche_eingrenzen_anhand_format;;utter_suche_eingrenzen_anhand_format;Welches Format soll das Selbstlernmaterial haben?
+suche_eingrenzen_welches_format;/suche_eingrenzen_welches_format{"resource_format":"Moopaed-Kurs"};resource_format;Moopaed-Kurs;utter_alle_ergebnisse_anzeigen;Möchtest du alle Ergebnisse ansehen?
+alle_ergebnisse_anzeigen;/alle_ergebnisse_anzeigen;;utter_bitte_um_bewertung;Ich hoffe ich konnte dir weiterhelfen. Mich würde es freuen, du könntest eines der Selbstlenrmaterialien bewerten. Möchtest du eines der Selbstlernmaterialien bewerten?
+ich_moechte_nicht_bewerten;/ich_moechte_nicht_bewerten;;utter_ich_moechte_nicht_bewerten;Das ist schade aber ok. Vielleicht das nächste Mal:) Wie kann ich dir noch weiterhelfen?
+utter_weiter_weiterhelfen;Hast du eine weitere Frage an mich oder kann ich dich bei der Suche nach Selbstlernmaterialien unterstützen?
+beantwortung_allgemeiner_fragen;ich habe eine allgemeine frage;;utter_beantwortung_allgemeiner_fragen;Wie kann ich dir den weiterhelfen?
+sprechstunde;gibt es eine sprechstunde?;;utter_sprechstunde;In einer regelmäßigen stattfindenden Sprechstunde hast du die Möglichkeit, sowohl von anderen Studierenden als auch einer Lernbegleitung Unterstützung zu bekommen. Für die Sprechstunde solltest du dich frühzeitig anmelden, da nur begrenzt Teilnehmer teilnehmen können.
+utter_weitere_frage;Hast du sonst noch eine Frage?
+naechste_sprechstunde;wann findet diese statt?;;utter_naechste_sprechstunde;Die Termine für die nächsten TEgoDI-Gruppensprechstunden findest du unter News & Termine im TEgoDi-Helpdesk (https://www.moopaed.de/moodle/course/view.php?id=10386)
+utter_weitere_frage;Kann ich dir sonst noch irgendwie weiterhelfen?
+ansprechpartner;wer ist ansprechpartner?;;utter_ansprechpartner_schmidt;Ansprechpartner für die Lernbegleitung ist Herrn Schmidt, den du telefonsich unter 0751 501 - 8209 oder per Mail "christian.schmidt@ph-weingarten.de" erreichen.
+bedingung_sprechstunde;gibt es bedingungen um an der sprechstunde teilzunehmen?;;utter_bedingung_sprechstunde;Grundsätzlich gibt es keine Bedingungen für die Teilnahme. Jedoch solltest du dein Problem in maximal 5 Minuten präsentieren können, um mit den anderen in die Diskussion zu gehen.
+goodbye;vielen dank Ted;;

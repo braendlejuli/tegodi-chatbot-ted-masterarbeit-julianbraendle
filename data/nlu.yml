@@ -1,0 +1,938 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - Hallo
+    - Huhu
+    - Whats up
+    - Grüß Gott
+    - Guten Morgen
+    - Guten Abend
+    - grüzi
+    - Servus
+    - Aloha
+    - Grüß dich
+    - Allo
+    - Ciao
+    - Hallöchen
+    - Hoi
+    - Mahlzeit
+    - Moin
+    - Moinsen
+    - Salute
+    - Tach
+    - Tagchen
+    - Was geht?
+    - Hi
+    - Hey du
+    - hallo
+    - holla
+    - Ola
+    - Servus Ted!
+    - HAllo
+    - HAllo Ted
+    - Hallo TED
+- intent: goodbye
+  examples: |
+    - Vielen Dank für deine Hilfe. Tschüss
+    - Danke für deine Hilfe :)
+    - Dankeschön. Bis zum nächsten mal
+    - danke.tschau
+    - danke! ciao
+    - bis dann
+    - Danke Ted! Tschau
+    - DANKE
+    - Vielen dank dir TEd. Bis dann
+    - Bis Bald Ted
+    - Vielen dank Ted. Bis zum nächsten Mal
+    - Dankeschön mein bester!
+    - Dankeschön. Du hast mir weitergeholfen! Bis dann
+    - Naja, bringen tut mir das jetzt nichts. Tschau
+    - Das hilft mir nicht weiter. tschau
+    - tschüss
+    - Du musst noch viel lernen. Tschüss
+    - Nein danke, Vielen Dank für deine Hilfe. Tschüss
+    - vielen dank. dann wer ich  mich an das tegodi team wenden
+    - vielen dank Ted. Bis dann :)
+    - Vielen dank Ted. Bis dann :)
+    - Vielen Dank Ted. Bis zum nächsten mal.
+    - Vielen Dank Ted. Bis zum nächsten Mal.
+    - Vielen Dank Ted. Bis zum nächsten Mal!
+    - Alles klar, vielen Dank dir!
+    - Danke Teddi
+    - Tschüss
+    - Tschüss und auf Wiedersehen
+    - okay danke und tschüss
+    - Danke das reicht erstmal. Tschau
+    - vielen dank bis bald
+    - danke dir
+    - ciao
+    - bye
+    - Viel Dank und TSchüss
+    - Vielen Dank! Und Tschüss
+    - danke und ciao
+    - danke
+    - vielen dank und einen schönen tag
+    - Danke lieber Bot und bis bald
+    - Tschüß, danke.
+- intent: name
+  examples: |
+    - Wie heißt du?
+    - Wie war dein Name?
+    - Wie ist dein Name?
+    - Verrätst du mir deinen Namen?
+    - Mein Name ist Julian, Wie heißt du?
+    - Kannst du mir sagen, wie du heißt?
+- intent: warum_name_ted
+  examples: |
+    - Warum heißt du Ted?
+    - Weshalb heißt du Ted?
+    - Woher kommt dein Name?
+    - Wer hat dir den Namen ted gegeben?
+    - Wieso wirst du Ted genannt?
+- intent: wie_alt
+  examples: |
+    - Wie alt bist du?
+    - Wie alt bist du Ted?
+    - Kannst du mir sagen wie alt du bist?
+    - Hast du ein alter?
+- intent: geschlecht
+  examples: |
+    - Ted, bist du männlich oder weiblich?
+    - Hast du ein Geschlecht?
+    - Du bist männlich oder?
+    - Kann ein CHatbot ein Geschlecht haben?
+    - Ich frage mich gerade, ob du männlich oder weiblich bist.
+- intent: ted_aufgaben
+  examples: |
+    - Ted, was sind deine Aufgaben?
+    - Was sind deine Aufgaben?
+    - Welche Aufgaben hast du?
+    - Kannst du mir deine Aufgaben sagen?
+    - Was machst du?
+    - Was musst du den tun?
+    - Für was bist du zuständig?
+- intent: ted_interessen
+  examples: |
+    - Hast du Interessen?
+    - Für was interessierst du dich?
+    - Sag mal, hast du auch Interessen?
+    - Wo liegen deine Interessen?
+    - Ich spiele gerne Fußball. Hast du auch Interessen?
+    - Hast du Hobbys?
+    - Du bist zwar kein Mensch aber hast du auch Hobbies?
+    - Hast du eine Leidenschaft?
+- intent: was_ist_ted_wichtig
+  examples: |
+    - Was ist dir wichtig?
+    - Woraus ziehst du deine Kraft?
+    - Ted, was ist dir den wichtig?
+    - Was liegt dir am Herzen?
+    - Was ist dir besonders wichtig?
+- intent: ted_begeisterung
+  examples: |
+    - Für was kannst du dich begeistern?
+    - Was begeistert dich Ted?
+    - Was macht dir Freude?
+    - Wo liegt die Begeisterung für dich?
+    - Von was bist du begeistert?
+    - Wie kann man dich begeistern?
+- intent: suche_selbstlernmaterialien
+  examples: |
+    - Ich suche Selbstlernmaterialien
+    - Selbstlernmaterialien
+    - Ich suche Materialien die mich in meinem Projekt unterstützt
+    - SLM
+    - Ich bin auf der Suche nach Selbstlernmaterialien
+    - Kannst du mir Selbstlernmaterialien zeigen
+    - Ich benötige Selbstlernmaterialien
+    - Ich brauch deine Hilfe bei der Suche nach Selbstlernmaterialien
+    - ich suche Selbstlernmaterialien
+    - ich bin auf der suche nach Selbstlernmaterialien
+    - selbstlernmaterialien
+    - ich bin auf der Suche nach selbstlernmaterialien
+    - ich suche selbstlernmaterialien
+    - ich scuhe selbstlernmaterialien
+    - ich bin auf der suche nach selbstlernmaterialien
+    - selbstlermaterialien
+    - isch suche selbstlernmaterialien
+    - ich scuhe selbstlenrmaterialien
+    - Ich bin auf der Suche nach Selbstlernmaterialen
+    - Ich suche nach Selbstlernmaterialien im moopaed Kurs zum Thema "Grundlagen Mediendidaktik"
+    - ja, ich suche Selbstlernmaterialien
+    - Hey du, ich komme gerade nicht weiter, ich suche etwas zu Mediendidaktik, eher die Grundlagen, also ncihts kompliziertes. Weißt du, wo ich da was finde?
+    - ich suche nach Selbstlernmaterial?
+    - ich suche selbstlenrmaterialien
+    - Ich suche nach Selbstlernmaterialien
+    - Selbstlernmateriliaen
+    - selbstlernmaterialiel
+    - ich suche nach selbstlernmaterialien
+    - Selbstlernmaterialien bitte
+    - ICh suche nach Selbstlernmaterialien
+    - suche selbstlernmaterialien
+    - selbstlenrmaterialien
+    - ich suche nach selbstlernmaterialien?
+- intent: suche_nach_wissensgebiet
+  examples: |
+    - [digitales Lehren und Lernen](resource_wissensgebiet){{"resource_wissensgebiet":"digitales Lehren und Lernen"}}
+    - [Projektmanagement](resource_wissensgebiet){{"resource_wissensgebiet":"Projektmanagement"}}
+    - Bin auf der Suche nach Lernmaterialien zum Wissensgebiete [digitales Lehren und Lernen](resource_wissensgebiet){{"resource_wissensgebiet":"digitales Lehren und Lernen"}}
+    - Kannst du mir Materialien zum Wissensgebiete [Mediendidaktische Grundlagen](resource_wissensgebiet) zeigen?{{"resource_wissensgebiet":"Mediendidaktische Grundlagen"}}
+    - Ich bin auf der Suche nach Selbstlernmaterialien zum Thema [Mediendidaktische Grundlagen](resource_wissensgebiet){{"resource_wissensgebiet":"Mediendidaktische Grundlagen"}}
+    - Ich suche Informationen zum Wissensgebiete [Datenschutz und Urheberrecht](resource_wissensgebiet){{"resource_wissensgebiet":"Datenschutz und Urheberrecht"}}
+    - Ich benötige Informationen zum Thema [Datenschutz und Urheberrecht](resource_wissensgebiet){{"resource_wissensgebiet":"Datenschutz und Urheberrecht"}}
+    - Ich suche Selbstlernmaterialien zum Wissensgebiete [Technische Grundlagen und Tutorials](resource_wissensgebiet){{"resource_wissensgebiet":"Datenschutz und Urheberrecht"}}
+    - Ich suche Materialien zum Wissensgebiete [Datenschutz und Urheberrecht](resource_wissensgebiet) in der Schule{{"resource_wissensgebiet":"Datenschutz und Urheberrecht"}}
+    - Ich suche Materialien zum Wissensgebiete [Mediendidaktische Grundlagen](resource_wissensgebiet){{"resource_wissensgebiet":"Mediendidaktische Grundlagen"}}
+    - Zeig mir Materialien zum Thema [Projektmanagement](resource_wissensgebiet){"entity":{{"resource_wissensgebiet":"Projektmanagement}}
+    - zum Thema [Mediendidaktische Grundlagen](resource_wissensgebiet){{"resource_wissensgebiet":"Mediendidaktische Grundlagen"}}
+    - Ich suche Selbstlernmaterialien zum Wissensgebiete [Mediendidaktische Grundlagen](resource_wissensgebiet){{"resource_wissensgebiet":"Mediendidaktische Grundlagen"}}
+    - Ich suche noch Materialien zum Wissensgebiete [digitales Lehren und Lernen](resource_wissensgebiet){{"resource_wissensgebiet":"digitales Lehren und Lernen"}}
+    - Ich bräuchte noch Selbstlernmaterialien zum Thema [digitales Lehren und Lernen](resource_wissensgebiet){{"resource_wissensgebiet":"digitales Lehren und Lernen"}}
+    - Kannst du mir Lernmaterialien zum Wissensgebiete [Mediendidaktische Grundlagen](resource_wissensgebiet) zeigen{{"resource_wissensgebiet":"Mediendidaktische Grundlagen"}}
+    - digitales Lehren und Lernen
+    - Ich suche Informationen zum Wissensgebiete Datenschutz und Urheberrecht
+    - Bin auf der Suche nach Lernmaterialien zum Wissensgebiete digitales Lehren und Lernen
+- intent: zeige_mir_moegliche_wissensgebiete
+  examples: |
+    - Zeige mir mögliche Wissensgebiete
+    - Zeige mir mögliche Wissensgebiete für die Suche an
+    - Was sind mögliche Wissensgebiete?
+- intent: suche_eingrenzen_welches_format
+  examples: |
+    - [Online-Plattform](resource_format)
+    - Ein [Tool](resource_format)
+    - [Youtube-Video](resource_format)
+    - [Lehrbuch](resource_format)
+    - [Website](resource_format)
+    - [Moopaed-Kurs](resource_format)
+    - [Plattform](resource_format)
+    - [Tool](resource_format)
+    - [interaktives Lernvideo](resource_format)
+    - Zeige mir nur Lernmaterialien von anderen [Website](resource_format)
+    - Zeige mir nur Lernmaterialien mit dem Format [Lernvideo](resource_format)
+    - Bitte nur Selbstlernmaterialien im Format [Lehrtext](resource_format)
+    - Ich würde mir gerne ein [Video](resource_format) anschauen.
+    - Ja, bitte nur [Youtube-Video](resource_format)
+- intent: suche_eingrenzen_welche_kompetenz
+  examples: |
+    - [Berufliches Engagement](resource_kompetenz)
+    - [digitale Ressourcen](resource_kompetenz)
+    - [Lehren und Lernen](resource_kompetenz)
+    - [Assessment und Feedback](resource_kompetenz)
+    - [Lernerorientierung](resource_kompetenz)
+    - [Förderung digitaler Kompetenzen](resource_kompetenz)
+- intent: suche_eingrenzen_welche_themenbereiche
+  examples: |
+    - [Einsatz digitaler Medien im Unterricht](resource_themenbereich)
+    - [digitale Werkzeuge](resource_themenbereich)
+    - [Datenschutz](resource_themenbereich)
+    - [Erklärvideos](resource_themenbereich)
+    - [interaktive Unterrichtsmaterialien](resource_themenbereich)
+    - [Whiteboards](resource_themenbereich)
+    - [Audioproduktion](resource_themenbereich)
+    - [Bildbearbeitung](resource_themenbereich)
+    - [Programmierung](resource_themenbereich)
+    - [Unterrichtsmaterialien](resource_themenbereich)
+    - [digitale Projekte](resource_themenbereich)
+    - [Mediendidaktische Grundlagen](resource_themenbereich)
+    - Ich würde gerne zum Themenbereich [Einsatz digitaler Medien im Unterricht](resource_themenbereich) Selbstlernmaterialien sehen.
+    - Ich suche zum Themenbreich [Erklärvideos](resource_themenbereich) Selbstlernmaterialien
+    - Kannst du mir Selbstlernmaterialien zum Themenbereich [Audioproduktion](resource_themenbereich) anzeigen.
+    - Zum Themenbreich [Bildbearbeitung](resource_themenbereich) bitte.
+    - Zieg mir Selbstlernmaterialien zum Themenbereich [Programmierung](resource_themenbereich)
+- intent: suche_nicht_eingrenzen
+  examples: |
+    - Bitte die Suche nicht eingrenzen
+    - keine Eingrenzung
+    - Ich möchte die suche ohne Filter durchführen
+    - Suche bitte nicht eingrenzen
+- intent: suche_eingrenzen_anhand_format
+  examples: |
+    - Ja anhand des Parameters Format
+    - Anhand des Formats
+    - Format
+    - Ja bitte über das Format
+    - Ich würde gerne meine Suche über das Format eingrenzen
+    - /suche_eingrenzen_anhand_format
+- intent: suche_eingrenzen_anhand_wissensgebiet
+  examples: |
+    - Ja anhand des Parameters Wissensgebiet
+    - Anhand von Wissensgebieten
+    - Wissensgebiet
+    - Ja bitte über das Wissensgebiet
+    - Ich würde gerne meine Suche über das Wissensgebiet eingrenzen
+- intent: suche_eingrenzen_anhand_themenbereiche
+  examples: |
+    - Themenbereich
+    - Anhand des Themenbereichs
+    - Ich möchte die Suche über den Themenbereich weiter eingrenzen
+    - Eingrenzen anhand des Themenbreichs
+    - Grenz bitte die suche über den Themenbereich ein
+- intent: suche_eingrenzen_anhand_kompetenz
+  examples: |
+    - Kompetenz
+    - Kompetenzen
+    - Kompetenzen aus dem Kompetenzraster
+    - Grenz bitte die Suche anhand der Kompetenzen ein
+    - Ich möchte die Suche anhand einer Kompetenz eingrenzen
+    - Eingrenzen Kompetenz
+    - Grenz bitte die suche über die Kompetenzen ein
+- intent: zeige_mir_moegliche_filter
+  examples: |
+    - Zeige mir mögliche Filter
+    - mögliche Filter
+    - Eingrezung über Filter
+    - Eingrenzung
+    - Filter anzeigen
+- intent: suche_nach_filter_format
+  examples: |
+    - Format
+    - Suche nach Filter Format
+    - Nach Format eingrenzen
+    - Anhand des Formats eingrenzen
+    - Format eingrezen
+    - Suche nach Format eingrenzen
+- intent: ergebnisse_suche_selbstlernmaterialien_ja
+  examples: |
+    - Ja
+    - Ja das hilft mir erstmal weiter.
+    - Ich muss mir die Selbstlernmaterialien erst mal anschauen
+    - Jop
+    - Yes
+    - Ja, danke
+- intent: alle_ergebnisse_anzeigen
+  examples: |
+    - alle Ergebnisse anzeigen
+    - alle ergebnisse anzeigen
+    - zeige alle Ergebnisse
+    - Bitte zeig mir alle Ergebnisse die du gefunden hast
+    - zeig alles
+- intent: nicht_alle_ergebnisse_anzeigen
+  examples: |
+    - nein danke
+    - nein
+    - nein die reichen erstmal
+    - ne, muss nicht sein.
+    - Nein
+    - Die drei reichen mir erstmal
+    - vielen dank aber nein danke :)
+    - nö
+    - muss nicht sein
+    - später vllt
+    - nein brauchst du nicht
+    - nein, danke
+    - okay, danke TED
+- intent: ja_ich_moechte_bewerten
+  examples: |
+    - ja ich würde gerne eines der Selbstlernmaterialien bewerten
+    - ja gerne bewerte ich eines der Selbstlernmaterialien
+    - ja gerne mach ich das
+    - ja gerne bewerte ich eines der materialien
+    - ja komm mach ich
+    - ich möchte eines der selbstlernmaterialien bewerten
+- intent: ich_moechte_nicht_bewerten
+  examples: |
+    - Nein Danke
+    - ich möchte eigentliche das selbstlernmaterial nicht bewerten
+    - zum jetzigen Zeitpunkt kann ich leider keine Bewertung abgeben
+    - Ich kann dir im Moment keine Bewertung des selbstlernmaterials geben
+    - ne ich möchte nicht bewerten
+    - nein, ich habe keine Zeit für eine bewertung
+    - nein, ich möchte jetzt nicht das Selbstlenrmaterial bewerten
+    - eine Bewertung kann ich zum jetzigen Zeitpunkt nicht abgeben
+- intent: bewertung_selbstlernmaterialien
+  examples: |
+    - [★](bewertung_in_sterne)
+    - [★★](bewertung_in_sterne)
+    - [★★★](bewertung_in_sterne)
+    - [★★★★](bewertung_in_sterne)
+    - [★★★★★](bewertung_in_sterne)
+- intent: keine_weiteren_fragen
+  examples: |
+    - Nein ich habe keine weitere Frage
+    - Nein, danke
+    - Nein du hast meine Fragen soweit beantwortet.
+    - Ich habe keine weiteren Fragen
+    - Nop, soweit passt alles.
+    - Danke dir, aber nein ich habe keine weiteren Fragen.
+    - nein danke Ciao
+    - Nein Tschüss
+    - Ne, danke dir und tschüss
+- intent: problem_allgemein
+  examples: |
+    - Ich hab ein Problem und brauch Hilfe
+    - Hilfe! ich hab ein problem und komm nicht weiter
+    - Ich hab ein Problem
+    - Kannst du mir bei meinem Problem helfen?
+    - Ich hab ein riesen problem.
+- intent: beantwortung_allgemeiner_fragen
+  examples: |
+    - Ich habe eine allgemeine Frage zum Projekt
+    - allgemeine Frage
+    - Ich habe eine allgemeine Frage zu TEgoDi
+    - allgemeine Frage zu Tegodi
+    - Ich möchtes etwas zum Projekt wissen
+    - Kannst du mir meine Frage zum Projekt beantworten
+    - Hab ne Frage zum Projekt
+    - Ich hätte da noch eine allgemeine Frage zum Projekt
+    - Ich hab da noch eine allgemeine Frage zum Projekt
+    - Kannst du mir noch eine Frage zum Projekt beantworten
+    - hab da noch eine Frage zum Projekt
+    - ich hab eine allgemeine Frage
+    - ich hab eine allgemeine Frage zum projekt
+    - ich habe eine allgemeine Frage zum Projekt
+    - Ich habe eine allgemeine Frage
+    - ich habe eine allgemeine Frage zum projekt
+    - ich habe eine allgemein frage
+    - allgemeine Frage zum Projekt
+    - Ich hätte gern eine Frage zu meinem Projekt?
+    - ich habe eine allgemeine frage
+    - ich habe eine allgemeine Frage
+    - ich hab noch eine allgemeine frage zum projekt
+    - ich hab eine allgemeine frage
+- intent: fristen
+  examples: |
+    - Fristen?
+    - Gibt es Fristen, an die ich mich halten muss?
+    - Wann ist immer die Anmeldung und die Abgabe?
+    - Gibt es Fristen bis zu welchem Semester ich mit dem jeweiligen Medienprojekt fertig sein muss?
+    - Wie sieht es mit den Fristen aus?
+    - Gibt es Fristen die ich beachten muss?
+    - Welchen Daten sind wichtig für das Projekt?
+    - Wer legt die Fristen für die Projekte fest?
+- intent: abgabefrist
+  examples: |
+    - Wann ist der Abgabezeitraum für das Projekt?
+    - Wann ist der Abgabetermin?
+    - Wann ist Abgabe?
+    - Wann muss ich mein Projekt abgeben?
+    - Gibt es einen Termin für die Abgabe meines Projekts?
+    - Gibt es eine Abgabefrist für das Projekt?
+- intent: anmeldefrist
+  examples: |
+    - Anmeldefrist
+    - Gibt es eine Anmeldefrist?
+    - Wann ist die Anmeldefrist?
+    - Wann muss ich mein Medienprojekt anmelden?
+    - Kannst du mir ein Datum nennen, wann ich mein Medienprojekt anmelden muss?
+- intent: hilfe_im_Projekt
+  examples: |
+    - Ich komm leider gerade nicht in meinem Medienprojekt voran
+    - Ich brauche Hilfe in meinem Projekt
+    - Kann mir irgendjemand bei meinem Medienprojekt helfen?
+    - Ich brauche Unterstützung im Projekt?
+    - Wo bekomm ich Unterstützung wenn ich im Medienprojekt nicht weiterkomme?
+    - Hilfe im Medienprojekt
+    - ich brauch hilfe in meinem projekt
+    - ich brauch hilfe beim projekt
+- intent: wer_ist_für_welchen_bereich_verantwortlich
+  examples: |
+    - Wer ist den für welchen Bereich im Projekt verantwortlich?
+    - Wer ist am Projekt beteiligt und wer ist für welchen Bereich verantwortlich?
+    - Beteiligte Personen und ihre Verantwortlichkeitsbereiche?
+    - Wie sind die Verantwortlichkeitsbereiche aufgeteilt?
+    - Wer ist für was im Projekt verantwortlich?
+- intent: ansprechpartner
+  examples: |
+    - Wer ist Ansprechpartner?
+    - Ansprechpartner?
+    - Wer hilft mir, wenn ich nicht weiter komme?
+    - Wer hilft mir wenn ich ein Problem habe?
+    - An wen kann ich mich wenden, falls ich ein Problem habe?
+    - Ich komme nicht mehr weiter in meinem Projekt, da ich ein Probelm habe. Wer hilft mir da?
+    - Welche Ansprechpartner gibt es?
+    - Gibt es einen Ansprechpartner?
+    - Gibt es eine Lernbegleitung?
+    - Bietet das Projekt eine Lernbegleitung an?
+    - Bietet das Projekt Ansprechpartner bei Fragen an?
+    - Wenn kann ich diesbezüglich fragen?
+    - gibt es ansprechpartner?
+    - wer ist ansprechpartner?
+- intent: lernbegleitung
+  examples: |
+    - lernbegleitung?
+    - Ist die Lernbegleitung auch der Ansprechpartner?
+    - Gibt es eine Lernbegleitung?
+    - Welche Aufgaben hat die Lernbegleitung?
+    - Wer ist Lernbegleiter?
+    - Wer sind die Lernbegleitungen?
+    - Gibt es vom Projekt eine Lernbeleitung?
+    - Kann ich eine Lernbegleitung in Anspruch nehmen?
+- intent: ansprechpartner_schmidt
+  examples: |
+    - Wie erreiche ich Herr Schmidt?
+    - Wie kann ich Herr Schmidt?
+    - Kannst du mir die E-Mail Adresse von Herrn Schmidt sagen?
+    - Wo ist das Büro von Herrn Schmidt?
+    - In welchem Raum finde ich Herr Schmidt?
+    - Kann ich Herrn Schmidt auch telefonisch erreichen?
+    - An welchen Dozenten kann ich mich wenden, wenn ich Hilfe benötige?
+- intent: technische_probleme
+  examples: |
+    - Ich habe technische Probleme
+    - An wen kann ich mich bei technischen Problemen wenden?
+    - Ich brauch Hilfe in sachen IT
+    - Ich hab Fragen zur IT- und Medieninfrastruktur an der PH Weingarten
+    - Ich hab Fragen zur IT- und Medieninfrastruktur an der PH Weingarten. An wen kann ich mich wenden?
+    - Hilfe bei technischen Problemen
+    - Gibt es sonst noch Bedingungen?
+- intent: sprechstunde
+  examples: |
+    - Gibt es eine Sprechstunde?
+    - Findet die Sprechstunde in Präsenz statt?
+    - Wo bekomme ich den Zugang zur (Zoom)Sprechstunde?
+    - Ist es eine Einzel- oder eine Gruppensprechstunde?
+    - Kannst du mir alle wichtigen infos zur Sprechstunde geben?
+    - Wer kann an der Sprechstunde teilnehmen?
+    - Kannst du mir die Termine für die nächsten Sprehstunden sagen?
+    - Findet die Sprechstunde in einem regelmäßigen Turnus statt?
+    - Was sollte ich zur Sprechstunde wissen?
+    - Sprechstunde
+    - Sag mir die wichtigsten Facts für die Sprechstunde
+    - Wir eine Sprechstunde angeboten?
+    - gibt es eine sprechstunde zum projekt?
+    - Ich würde gerne an einer Sprechstunde teilnehmen. Gibt es eine Sprechstunde
+    - Ich würde gerne an einer Sprechstunde teilnhemen. Gibt es eine Sprechstunde?
+    - Hallo, wird es eine Sprechstunde zu dem Projekt TeGOdi geben?
+    - Hey, ich wolllte fragen, ob Sie Sprechstunden anbieten.
+    - Wann sind die Sprechstundenzeiten?
+    - Wann ist die Sprechstunde?
+    - sprechstunde
+    - Wann ist sie?
+    - Ich wurde gerne wissen ob Sprechstunden zum Projekt TEgoDi gibt?
+    - ich würde an der sprechstunde teilnehmen
+    - gibt es eine sprechstunde zum Projekt TEgoDi?
+    - Gibt es eine Sprechstunde zum Projekt TeGoDi?
+    - Gibt es eine Sprechstunde zum Projekt?
+    - gibt es eine sprechstunde?
+    - gibt es eine sprechtsunde?
+- intent: sprechstunde_teilnehmeranzahl
+  examples: |
+    - Wie viele können an der Sprechstunde teilnehmen?
+    - Wie viele Plätze gibt es in der Sprechstunde?
+    - Anzahl Plätze Sprechstunde?
+    - Wie viele können teilnehmen?
+    - Ist die Sprechstunde in ihren Teilnehmern begrenzt?
+    - Wie viele ECTS-Punkte erhalte ich für das Projekt
+    - wie viele können an der sprechtsunde teilnehmen?
+- intent: leitung_sprechstunde
+  examples: |
+    - Wer leitet die Sprechstunde?
+    - Wer hat die Leitung der Sprechstunde?
+    - Wer ist verantwortlich für die Sprechstunde?
+    - Bietet jemand eine Sprechstunde zum Projekt an?
+    - Wer ist der Verantwortliche für die Sprechstunde?
+    - Wer ist zuständig für die Sprechstunde?
+    - Bei wem findet die Sprechstunde statt?
+    - Wer gibt die Sprechstunde?
+    - wer leitet die sprechstunde?
+    - wer ist für die sprechstunde verantwortlich?
+- intent: anmeldung_sprechstunde
+  examples: |
+    - anmeldung Sprechstunde
+    - Müss ich mich für die Sprechstunde anmelden?
+    - Wie kann ich mich für die Sprechstunde anmelden?
+    - Kannst du mir die E-Mail Adresse sagen, unter welcher ich mich für die Sprechstunde anmelden kann?
+    - Ist eine Anmeldung nötig?
+    - Kann ich einfach an der Sprechstunde teilnehmen
+    - Kann ich ohne Anmeldung zur Sprechstunde kommen?
+    - Kann ich einfach so an der Sprechstunde teilnehmen?
+    - Ich würde mich gerne für eine Sprechstunde anmelden.
+    - Und wo kann ich mich für die Sprechstunde anmelden?
+    - Wo kann ich mich denn für die Sprechstunde anmelden?
+    - wie melde ich mich für die sprechstunde an?
+    - wo kann ich mich für die sprechstunde anmelden?
+- intent: bedingung_sprechstunde
+  examples: |
+    - Gibt es Bedingungen für die Teilnahme an der Sprechstunde?
+    - Welche bedingungen muss ich erfüllen, um an der Sprechstunde teilzunehmen?
+    - Welche Voraussetzungen gibt es?
+    - Was sind die Voraussetzungen für die Sprechstunde?
+    - Voraussetzungen Sprechstunde
+    - Bedingungen Sprechstunde
+    - Gibt es Voraussetzungen um an der Sprechstunde teilzunehmen?
+    - Muss ich mich vorbereiten?
+    - GIbt es Bedingungen für die teilnahme?
+    - gibt es bedingungen für die teilnahme an der sprechstunde?
+    - Gibt es Bedingungen um an der Sprechstunde teilzunehmen?
+    - Okay danke. Gibt es noch irgendwelche Bedingungen?
+    - Gibt es Bedingungen an der Sprechstunde teilzunehmen
+    - Gibt es sonst noch Bedingungen um an der Sprechstunde teilzunehmen?
+    - Unter welchen Bedingungen kann ich an der Sprechstunde teilnehmen?
+    - Was muss ich erfüllen, um an der Sprechstunde teilzunehmen?
+    - Muss ich für die Sprechstunde etwas beachten?
+    - Ist es erforderlich, bestimmte Materialien zur Sprechstunde mitzubringen?
+    - Muss ich denn irgendetwas zur Sprechstunde mitbringen?
+    - Welche Bedingungen muss ich erfüllen um an der Sprechstunde teilnehmen zu können?
+    - Muss ich irgendwas mitbringen um an der sprechstunde teilnehmen zu können?
+    - Welche Bedingungen gibt es, um an der Sprechstunde teilzunehmen?
+    - Was sind die Bedinungen um an einer Sprechstunde teilzunehmen?
+    - Wann darf ich an eienr Sprechstudne teilnehmen?
+    - Gibt es irgendwelche Bediengungen um teilzunehmen?
+    - gibt es bedingungen, um an der sprechstunde teilzunehmen
+    - Welche Bedingungen muss ich erfüllen um an der Sprechstunde teilzunehmen?
+    - Gibt es Bedingungen, um an der Sprechstunde teilzunehmen?
+    - Gibt es Bedingungen damit ich an der Sprechstunde teilnehmen kann?
+    - gibt es bedienugungen für die teilnahme?
+    - gibt es bedingungen für die teilnahme?
+- intent: ablauf_sprechstunde
+  examples: |
+    - Ablauf Sprechstunde?
+    - Wie läuft eine Sprechstunde ab?
+    - Wie ist der Prozess des Sprechstunde?
+    - Muss ich irgendetwas beachten, wenn ich an der Sprechstunde teilnehmen möchte?
+- intent: naechste_sprechstunde
+  examples: |
+    - Ich wollte wissen ob Herr Schmidt eine Sprechtsunde anbietet?
+    - nächste Sprechstunde
+    - Wann findet die nächste Sprechstunde statt?
+    - Kannst du mir den Termin für die nächste Sprechstunde sagen?
+    - Termin nächste Sprechstunde?
+    - Findet nächste Woche eine Sprechstunde statt?
+    - Wann findet die Sprechstunde statt?
+    - Wann ist die nächste Sprechstunde?
+    - Um wie viel Uhr findet die nächste Sprechstunde statt?
+    - Und wann findet die nächste Sprechstunde statt?
+    - Und wann ist die nächste Sprechstunde?
+    - Wann findet die Sprechstunde immer statt
+    - Danke, und wann findet diese statt?
+    - wann findet die nächste sprechstunde stat?
+    - Zeiten für die Sprechstunde
+    - Wann fidnet die Sprechstunde statt?
+    - wann sprechstunde
+    - Ich würde gerne Wissen wann die Sprechstunden stattfinden?
+    - Wann genau findet die nächste Sprechstunde statt?
+    - Wann sind die Sprechstunden?
+    - Wann findet die Sprechtsunde statt?
+    - wann findet die nächste sprechstunde statt?
+    - wann findet die nächste sprechstunde satt?
+- intent: vorbereitung_sprechstunde
+  examples: |
+    - vorbereitung Sprechstunde
+    - Ist eine Vorbereitung für die Sprechstunde notwendig?
+    - Benötigen die Lernbegleiter bereits im Vorfeld von mir etwas?
+    - Was muss in die E-Mail zur Anmeldung für die Sprechstunde rein?
+    - Was muss in die Mail für die Sprechstunde rein rein?
+    - Muss ich meine Fragen und Probleme bereits in die Mail schreiben?
+    - Benötigen die Lernbegleiter bereits im Vorfeld eine konkrete Problemstellung/Frage von mir?
+    - Wie sollte ich mich auf die Sprechstunde vorbereiten?
+- intent: anmeldung_und_link_zoom
+  examples: |
+    - Sollte ich sonst noch etwas zur Sprechstunde wissen?
+    - Was muss ich sonst noch wissen?
+    - Was sollte ich zur Anmeldung und zur Sprechstunde noch wissen?
+    - Gibt es sonst noch was, was ich zur Sprechstunde wissen sollte?
+    - Infos zur Anmeldung und Zoom-Link
+- intent: wo_sprechstunde
+  examples: |
+    - Wo findet die Sprechstunde statt?
+    - Findet die Sprechstunde online oder in präsenz statt?
+    - Wo an der PH findet die sprechstunde statt?
+    - Kannst du mir sagen, wo die Sprechstunde stattfindet?
+    - In welchem Raum findet die Sprechstunde statt?
+    - und wo findet diese statt?
+    - Wo ist die Sprechstunde?
+    - Wo findet die Sprechstunde satt?
+    - Und wo ist die Sprechstunde
+    - okay, danke. Wo finden die Sprechstunden denn statt?
+    - Kannst du mir auch kurz sagen, wann und wo die Sprechstunden stattfinden?
+    - wo findet die Sprechstunde statt?
+    - Wo findet sie Sprechstunde statt?
+    - wo
+    - Wo finden die SPrechstunden statt oder steht es bei dem Link dabei?
+    - wo findet die sprechstunde statt
+    - WO genau finden die Sprechstunden statt?
+- intent: austausch
+  examples: |
+    - Gibt es eine Möglichkeit sich mit anderen auszutauschen?
+    - Besteht die Möglichkeit sich mit jemand über das Projekt auszutauschen?
+    - Kann ich mich irgendwo mit anderen bzgl. des Projekts unterhalten?
+    - Wo kann ich mich mit anderen über mein Projekt austauschen?
+    - Möglichkeit zum Austausch?
+    - austausch?
+- intent: austauschforum
+  examples: |
+    - Kannst du mir sagen wo ich das Austauschforum des Projekts finde?
+    - Wo finde ich in Moopaed das Austauschforum zum Projekt?
+    - Hast du mir den Link zum Austauschforum zum projekt?
+    - Es gibt doch sicherlich ein Austauschforum?
+    - Gibt es sowas wie ein Austauschforum?
+- intent: news
+  examples: |
+    - Gibt es Neuigkeiten?
+    - Kannst du mir die aktuellen Neuigkeiten sagen?
+    - Gibt es neue News bzgl. digitalem Lehren und Lernen?
+    - Wo bekomme ich News rund um das Projekt?
+    - Gibts News rund ums Projekt?
+    - News
+- intent: veranstaltungen
+  examples: |
+    - veranstaltungen
+    - Kannst du mir Auskunft über anstehende Veranstaltungen geben?
+    - Gibt es neue Veranstaltungen?
+    - Sind interessante Veranstaltungen geplant?
+    - Kann man irgendwo einen Kalender einsehen, indem alle kommenden Termine für Veranstaltungen etc. eingetragen sind?
+    - Wo finde Informationen zu anstehenden Veranstaltungen?
+    - Welche Termine stehen in der kommenden Zeit an?
+    - Wo finde ich das aktuelle Programm der Veranstaltungen?
+    - Zeige mir alle anstehenden Veranstaltungen an.
+    - Steht in nächster Zeit eine Veranstaltung an?
+    - Kannst du mir sagen, ob in der kommenden Zeit Veranstaltungen anstehen?
+    - Gibt es in nächster Zeit Veranstaltungen von TEgoDi?
+    - Kannst du mir sagen, welche Termine und Veranstaltungen in der kommenden Zeit anstehen?
+- intent: blog
+  examples: |
+    - blog
+    - Gibt es zum Projekt ein Blog?
+    - Gibt es einen Blog mit Neuigkeiten?
+    - Wo finde ich aktuelle Informationen rund um das Projekt?
+    - Was passiert gerade neues im Projekt?
+    - Gibt es irgendwo aktuelle Infos zu TEgoDi?
+    - Was passiert gerade aktuelles im Projekt?
+    - Wo finde ich aktuelle Informationen zum Projekt?
+    - Kannst ud mir sagen wo ich den Blog zum Projekt finde?
+    - Gibt es einen Blog zum Projekt?
+    - Was passiert gerade aktuelles?
+    - aktuelle Neuigkeiten im Projekt
+    - aktuelle Themen im Projekt
+- intent: kalender
+  examples: |
+    - kalender
+    - Projektkalender
+    - Gibt es einen Projektkalender?
+    - Übersicht mit allen anstehenden Terminen
+    - Gibt es eine Übersicht mit allen neuen Terminen
+    - Kannst du mir einen Kalender anzeigen mit allen anstehenden Terminen?
+    - TEgoDI Kalender
+    - Kannst du mir den Projektkalender anzeigen?
+- intent: voraussetzung
+  examples: |
+    - Voraussetzungen?
+    - Gibt es Voraussetzungen am Projekt teilzunehmen?
+    - Was sind die Voraussetzungen am Projekt teilzunehmen?
+    - Gibt es Voraussetzungen um am Projekt teilzunehmen?
+    - Ted, weist du ob es Voraussetzungen gibt, um am Projekt TEgoDi teilzunehmen?
+    - Muss ich irgendwelche Voraussetzungen erfüllen, um am Projekt teilzunehmen?
+    - Was brauche ich zur Zulassung für das Projekt?
+    - Benötige ich bestimmte Qualifikationen um am Projekt teilzunehmen?
+    - Gibt es Qualifikationen die ich zuvor abschließen muss, um am Projekt teilzunehmen?
+- intent: ausleihen_medien
+  examples: |
+    - Medien ausleihen
+    - Wo kann ich Medien ausliehen?
+    - Kann ich irgendwo Technik ausleihen?
+    - Wo kann ich technisches Equipment ausleihen?
+    - Kann ich irgendwo technisches Equeipment ausleihen?
+    - Gibt es die Möglichkeit Medien bzw. technisches Equipment auszuleihen?
+- intent: mars
+  examples: |
+    - Wo finde ich das Mars?
+    - Infos zum Mars?
+    - Was ist das Mars?
+    - Kannst du mir sagen was das Mars ist?
+    - Kannst du mir die Öffnungszeiten vom Mars sagen?
+    - Ich weis nicht was das Mars ist. Kannst du mir Infos dazu geben?
+    - Was ist das Mars der Pädagogischen Hochschule Weingarten?
+    - was ist das mars?
+- intent: ziel_projekt_allgemein
+  examples: |
+    - ziel des Projekts?
+    - Ted, was ist das Ziel des Projekts?
+    - Kannst du mir sagen was das Ziel des Projekts ist?
+    - Was ist das Ziel von TEgoDi?
+    - Was ist das übergeordnete Ziel?
+    - Worauf zielt das Projekt ab?
+    - Warum muss ich am Projek TEgoDi teilnehmen?
+    - Was soll im Projekt TEgoDi vermittelt werden?
+    - Was soll vermittelt werden?
+    - Welche Kompetenzen sollen vermittelt werden?
+- intent: ziel_lehrprojekt
+  examples: |
+    - Lehrprojekt
+    - ziel des Projekts eins?
+    - Was ist das Ziel des Lehrprojekts?
+    - Welches Ziel soll mit dem Lehrprojekt erfüllt werden?
+    - Kannst du mir das Ziel des Lehrprojekts sagen?
+    - Kannst du mir das Ziel des Medienprojekt eins sagen?
+    - Was ist das Ziel des Medienprojekts eins?
+    - Projekt eins: Was ist das Ziel?
+    - Welche Kompetenzen sollen mit dem Lehrprojekt/Medienproejkt eins erlangt werden?
+    - Im Medeienproejkt eins / Lehrprojekt sollen welche Kompetenzen aufgebaut werden?
+- intent: ziel_medienentwicklungsprojekt
+  examples: |
+    - Medienentwicklungsprojekt
+    - ziel des Projekts zwei?
+    - Was ist das Ziel des Medienentwicklungsprojekts?
+    - Welches Ziel soll mit dem Medienentwicklungsprojekt erfüllt werden?
+    - Kannst du mir das Ziel des Medienentwicklungsprojekt sagen?
+    - Kannst du mir das Ziel des Medienprojekt zwei sagen?
+    - Was ist das Ziel des Medienprojekts zwei?
+    - Projekt zwei: Was ist das Ziel?
+    - Welche Kompetenzen sollen mit dem Medienentwicklungsprojekt/Medienproejkt zwei erlangt werden?
+    - Im Medeienprojekt zwei / Medienentwicklungsprojekt sollen welche Kompetenzen aufgebaut werden?
+- intent: fachauswahl
+  examples: |
+    - Auswahl Fach
+    - In welchem Fach kann ich mein Medienprojekt durchführen?
+    - Gibt es bestimmte Fächer, in welchen ich das Projekt durchführen muss?
+    - In welchem Fach muss ich das Projekt durchführen?
+    - Kann ich das Fach indem ich mein Projekt absolviere frei wählen?
+    - Kann ich das Fach frei wählen?
+    - Gibt es Vorgaben bzgl. des Fachs indem ich mein Projekt absolvieren muss?
+    - Möglichkeiten bei der Fächerauswahl
+    - Welche Möglichkeiten habe ich bei der Fächerauswahl?
+- intent: moopaed_kurs
+  examples: |
+    - moopaed kurs
+    - Gibt es einen Moopaed Kurs zum Projekt?
+    - Wie heißt der Moopaed-Kurs zum Projekt?
+    - Kannst du mir sagen, unter welchem Namen ich den Kurs in Moopaed finde?
+    - Name des Moopaed-Kurs?
+    - Gibt es einen TEgoDi-Helpdesk in Moopaed?
+    - Kannst du mir sagen ob es einen TEgoDi-Kurs in moopaed gibt?
+    - Gibt es auser dem Help-Desk einen weiteren Kurs in Moopaed zum Projekt?
+    - Gibt es einen Moopaed-Kurs mit allen zentralen Informationen?
+    - Wo finde ich die informationen auf der moopead seite?
+- intent: kompetenzen
+  examples: |
+    - kompetenzen die vermittelt werden sollen?
+    - Welche Kompetenzen sollen mit dem Projekt erlangt werden?
+    - Welche Kompetenzen werden vermittelt?
+    - Das Ziel ist es, welche Kompetenzen zu vermitteln?
+    - AUf welche Kompetenzen zielen die Projekte konkret ab?
+    - Ich stell mir die Frage, welche Kompetenzen ich im Projekt erlernen soll?
+    - Auf welche Kompetenzen zielt das Projekt ab?
+    - Auf welche Kompetenzen zielen die Projekte ab?
+- intent: bedeutung_tegodi
+  examples: |
+    - Welche Bedeutung hat TEgoDi?
+    - Was heißt TEgoDi?
+    - Woher kommt der Name TEgoDi?
+    - tegodi Bedeutung
+    - Was heißt eigentlich TEgoDi?
+    - Für was steht TEgoDi?
+    - Wieso heißt das Projekt TEgoDi?
+    - Kannst du mir sagen, für was TEgoDi steht?
+- intent: etcs
+  examples: |
+    - Wie viel Credits bekomm ich für mein projekt?
+    - Wie viel Credits bekomm ich für ein Projekt?
+    - ETCS?
+    - Wie ist ein Projekt gewichtet?
+    - Wie viel ETCS gibt das Projekt?
+    - Wie viel etcs gibt das Projekt?
+    - Wie viel ETCS werden für das Projekt vergeben?
+    - Wie viel ETCS bekomm ich für das Medienprojekt?
+    - Wie viel Etcs Punkte bekomme ich?
+    - Wie viel Credits werden mir für ein Projekt angerechnet?
+    - Wie viele ETCS-Punkte erhalte ich für das Projekt
+    - Wie viele ETCS-Punkte erhalte ich für das Lehr-Lern-Projekt?
+    - Wie viele ECTS-Punkte erhalte ich für das Lehr-Lern-Projekt
+    - Wie viel ECTS Punkte gibt das Projekt?
+    - ECTS Punkte
+    - Wie viele ECTS Punkte erhalte ich für das Projekt?
+    - Bekomme ich für mein Medienprojekt ETCS Punkte?
+    - Wie viel ects Punkte bekomme ich für das?
+    - Wie viele ETCS gibt das Projekt?
+    - wie viele ECTS bekomme ich für das Lehr-Lernprojekt?
+    - Gibt es Punkte für die Projekte?
+    - Wie viele ECTS bekomme ich für das Projekt?
+    - ects
+    - Wie viele ECTS Punkte erhalte ich für mein Projekt?
+    - Eine Frage hätte ich noch und zwar viele ETCS-Punkte bekommt man für das Projekt?
+    - wie viel ects punkte erhalte ich dadurch
+    - Wieviele ECTS Punkte bekomme ich für das Projekt?
+    - Wie viele ETCS Punkte bekomm ich für das Projekt?
+- intent: teilnahme
+  examples: |
+    - Müssen alle Studierende die Lehramt studieren teilnehmen?
+    - Müssen alle Lehramtstudierrende am Projekt teilnehmen?
+    - Müssen auch Grundschullehramtstudierende am Projekt teilnehmen?
+    - Müssen auch Studierende der Sekundarstufe eins (1) am Projekt teilnehmen?
+    - Müssen alle an TEgoDi teilnehmen?
+    - Müssen alle am Projekt teilnehmen?
+    - Nehmen alle Studierende des Studiengangs Lehramt am Projekt teil?
+    - Ich studiere Grundschullehramt. Muss ich am Projekt teilnehmen?
+    - Muss ich am Projekt teilnehmen?
+    - Ich studier Sekundarstufe 2. Muss ich am Projekt teilnehmen?
+    - teilnahme?
+    - Wer muss am Projekt teilnehmen?
+    - Bin ich verpflichtet ein Medienprojekt zu absolvieren?
+- intent: anmeldung
+  examples: |
+    - wo melde ich mich an?
+    - Du sagst ich soll mich frühzeitig anmelden. Wo kann ich mich den anmelden?
+    - Wie kann ich mich anmelden?
+    - wie kann ich mich anmelden?
+- intent: datum_uhrzeit
+  examples: |
+    - Wie viel Uhr ist es?
+    - Kannst du mir die Uhrzeit sagen?
+    - Uhrzeit?
+    - Kannst du mir Datum und Uhrzeit sagen?
+    - Der wie vielte ist heute?
+    - Sag mir bitte wie viel Uhr es ist?
+    - Sag mir bitte welchen Tag wir haben.
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: sonst_keine_fragen_mehr
+  examples: |
+    - Nein, ich hab sonst keine Fragen mehr
+    - ne, meine Fragen sind soweit beantwortet
+    - nein, gerade nicht mehr
+    - hab keine Fragen mehr, danke
+    - nop, gerade nicht
+- intent: out_of_scope
+  examples: |
+    - wie alt ist dein bruder?
+    - welche augenfarbe hat tonis hund?
+    - wie alt ist die mutter meiner schwester?
+    - ich hab gefragt was es heute zum mittagessen gibt!
+    - welche schuhgröße hat leonie den?
+    - welche schuhgröße habe ich?
+    - welche schuhgröße hat leonie?
+    - welche schuhgröße hat meine mutter?
+    - welche schuhgrüße hat leonie?
+    - was gibt es heute abend zum abendessen?
+    - was gibts den heute abend zum essen?
+    - was gibts heute zum abendessen?
+    - wie heißt die mutter miener kinder?
+- intent: nlu_fallback
+  examples: |
+    - ich hab gefragt wie alt dein bruder ist?
+    - welche augenfarbe hat der hund?
+    - was gibts heut zum mittagessen?
+    - welche augenfarbe hat die mutter meiner kinder
+    - die augenfarbe der mutter meiner kinder
+    - ich will wissen welche augenfarbe die mutter meiner kinder hat
+    - welche frabe hat mein auto?
+    - welche frabe hat das auto?
+    - welche frarbe hat der himmel?
+    - welche farbe hat der himmel?
+    - wie wird das wetter morgen?
+- lookup: resource_topic
+  examples: |
+    - digitale Schulorganisation
+    - digitales Wissensmanagement
+    - Mediensozialisation
+    - Chancen und Risiken digitaler Medien
+    - Qualität und Güte digitaler Medien

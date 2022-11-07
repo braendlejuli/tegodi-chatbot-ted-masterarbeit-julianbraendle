@@ -1,0 +1,566 @@
+version: "2.0"
+stories:
+# Beantwortung allgemeiner Fragen
+- story: beantwortung allgemeine fragen
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: frage zur abgabe
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: abgabefrist
+  - action: utter_abgabefrist
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: frage zur anmeldung
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: anmeldung
+  - action: utter_anmeldung
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: ansprechpartner
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: ansprechpartner
+  - action: utter_ansprechpartner_schmidt
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: bedeutung tegodi
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: bedeutung_tegodi
+  - action: utter_bedeutung_tegodi
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: frage nach etcs
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: etcs
+  - action: utter_etcs
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: teilnahme
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: teilnahme
+  - action: utter_teilnahme
+  - action: utter_weitere_frage
+  - intent: wer_ist_für_welchen_bereich_verantwortlich
+  - action: utter_wer_ist_für_welchen_bereich_verantwortlich
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Frage nach Austauschformum
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: austausch
+  - action: utter_austausch
+  - action: utter_weitere_frage
+  - intent: austauschforum
+  - action: utter_austauschforum
+  - intent: goodbye
+  - action: action_konversation_sichern  
+- story: Frage nach der naechtsen Sprechstunde
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - action: utter_weitere_frage
+  - intent: leitung_sprechstunde
+  - action: utter_leitung_sprechstunde
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Sprechstunde
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: sprechstunde
+  - action: utter_sprechstunde
+  - action: utter_weitere_frage
+  - intent: wo_sprechstunde
+  - action: utter_wo_sprechstunde
+  - action: utter_weitere_frage
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: bedingung_sprechstunde
+  - action: utter_bedingung_sprechstunde
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Hilfe im Projekt I - Sprechstunde
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: problem_allgemein
+  - action: utter_problem_allgemein
+  - intent: hilfe_im_Projekt
+  - action: utter_hilfe_im_Projekt
+  - action: utter_weitere_frage
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - action: utter_weitere_frage
+  - intent: ablauf_sprechstunde
+  - action: utter_ablauf_sprechstunde
+  - intent: anmeldung_sprechstunde
+  - action: utter_anmeldung_sprechstunde
+  - intent: sprechstunde_teilnehmeranzahl
+  - action: utter_sprechstunde_teilnehmeranzahl
+  - intent: vorbereitung_sprechstunde
+  - action: utter_vorbereitung_sprechstunde
+  - intent: anmeldung_und_link_zoom
+  - action: utter_anmeldung_und_link_zoom
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Hilfe im Projekt II - Sprechstunde
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: hilfe_im_Projekt
+  - action: utter_hilfe_im_Projekt
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: ablauf_sprechstunde
+  - action: utter_ablauf_sprechstunde
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Hilfe Forum
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: hilfe_im_Projekt
+  - action: utter_hilfe_im_Projekt
+  - intent: austauschforum
+  - action: utter_austauschforum
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Rund um Veranstaltungen
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: veranstaltungen
+  - action: utter_veranstaltungen
+  - intent: news
+  - action: utter_news
+  - action: utter_weitere_frage
+  - intent: blog
+  - action: utter_blog
+  - action: utter_weitere_frage
+  - intent: kalender
+  - action: utter_kalender
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Austausch mit ander
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: hilfe_im_Projekt
+  - action: utter_hilfe_im_Projekt
+  - intent: austausch
+  - action: utter_austausch
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: technsiches Problem
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: problem_allgemein
+  - action: utter_problem_allgemein
+  - intent: technische_probleme
+  - action: utter_technische_probleme
+  - action: utter_weitere_frage
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: alle weiteren Intents
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: fristen
+  - action: utter_fristen
+  - intent: anmeldefrist
+  - action: utter_anmeldefrist
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Ansprechpartner Credits
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: ansprechpartner
+  - action: utter_ansprechpartner_schmidt
+  - intent: lernbegleitung
+  - action: utter_lernbegleitung
+  - intent: ansprechpartner_schmidt
+  - action: utter_ansprechpartner_schmidt
+  - intent: etcs
+  - action: utter_etcs
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Ziel des Projekts und Fach und Moopaed-Kurs und Kompetenzen und mars
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: ziel_projekt_allgemein
+  - action: utter_ziel_projekt_allgemein
+  - action: utter_weitere_frage
+  - intent: ziel_lehrprojekt
+  - action: utter_ziel_lehrprojekt
+  - action: utter_weitere_frage
+  - intent: ziel_medienentwicklungsprojekt
+  - action: utter_ziel_medienentwicklungsprojekt
+  - intent: fachauswahl
+  - action: utter_fachauswahl
+  - intent: moopaed_kurs
+  - action: utter_moopaed_kurs
+  - action: utter_weitere_frage
+  - intent: kompetenzen
+  - action: utter_kompetenzen
+  - intent: mars
+  - action: utter_mars
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Ted Persönlichkeit
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: name
+  - action: utter_name
+  - intent: wie_alt
+  - action: utter_wie_alt
+  - intent: geschlecht
+  - action: utter_geschlecht
+  - intent: ted_aufgaben
+  - action: utter_ted_aufgaben
+  - intent: ted_interessen
+  - action: utter_ted_interessen
+  - intent: was_ist_ted_wichtig
+  - action: utter_was_ist_ted_wichtig
+  - intent: ted_begeisterung
+  - action: utter_ted_begeisterung
+  - intent: goodbye
+  - action: action_konversation_sichern
+# Suche nach Selbstlernmaterialien
+- story: Suche nach Selbstlernmaterial
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: bedingung_sprechstunde
+  - action: utter_bedingung_sprechstunde
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+  - intent: suche_nach_wissensgebiet
+    entities:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - slot_was_set:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - action: utter_eingrenzung_der_suche
+  - intent: suche_eingrenzen_anhand_kompetenz
+  - action: utter_suche_eingrenzen_anhand_kompetenz
+  - intent: suche_eingrenzen_welche_kompetenz
+    entities:
+    - resource_kompetenz: Lehren und Lernen
+  - slot_was_set:
+    - resource_kompetenz: Lehren und Lernen
+  - action: action_query_datebase
+  - action: utter_alle_ergebnisse_anzeigen
+  - intent: nicht_alle_ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+  - intent: ja_ich_moechte_bewerten
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: form_bewertung_selbstlernmaterial
+  - slot_was_set:
+    - requested_slot: titel_selbstlernmaterial
+  - slot_was_set:
+    - titel_selbstlernmaterial: Lernen trotz Corona
+  - slot_was_set:
+    - requested_slot: bewertung_in_sterne
+  - slot_was_set:
+    - bewertung_in_sterne: 4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: bewertung_sterne_in_csv_ubertragen
+  - action: utter_vielen_dank_bewertung
+  - action: utter_weiter_weiterhelfen
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Story from Conversation ID d3780f8ed35f41bf93313f7aa81c0758
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+  - intent: suche_nach_wissensgebiet
+    entities:
+    - resource_wissensgebiet: 'Datenschutz und Urheberrecht'
+  - slot_was_set:
+    - resource_wissensgebiet: 'Datenschutz und Urheberrecht'
+  - action: utter_eingrenzung_der_suche
+  - intent: suche_nicht_eingrenzen
+  - action: action_query_database_ohne_eingrenzung
+  - action: utter_alle_ergebnisse_anzeigen
+  - intent: alle_ergebnisse_anzeigen
+  - action: action_query_datebase_alle_Ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+  - intent: ja_ich_moechte_bewerten
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: form_bewertung_selbstlernmaterial
+  - slot_was_set:
+    - requested_slot: titel_selbstlernmaterial
+  - slot_was_set:
+    - titel_selbstlernmaterial: Lernen trotz Corona
+  - slot_was_set:
+    - requested_slot: bewertung_in_sterne
+  - slot_was_set:
+    - bewertung_in_sterne: 4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: bewertung_sterne_in_csv_ubertragen
+  - action: utter_vielen_dank_bewertung
+  - action: utter_weiter_weiterhelfen
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Story from Conversation ID c283844633cc46d989d628b9560d28c4
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: bedeutung_tegodi
+  - action: utter_bedeutung_tegodi
+  - intent: ansprechpartner
+  - action: utter_ansprechpartner_schmidt
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: vorbereitung_sprechstunde
+  - action: utter_vorbereitung_sprechstunde
+- story: Suche nach Selbstlernmaterial Format
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: bedingung_sprechstunde
+  - action: utter_bedingung_sprechstunde
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+  - intent: suche_nach_wissensgebiet
+    entities:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - slot_was_set:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - action: utter_eingrenzung_der_suche
+  - intent: suche_eingrenzen_anhand_format
+  - action: utter_suche_eingrenzen_anhand_format
+  - intent: suche_eingrenzen_anhand_format
+    entities:
+    - resource_kompetenz: Website
+  - slot_was_set:
+    - resource_kompetenz: Website
+  - action: action_query_datebase
+  - action: utter_alle_ergebnisse_anzeigen
+  - intent: nicht_alle_ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+  - intent: ja_ich_moechte_bewerten
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: form_bewertung_selbstlernmaterial
+  - slot_was_set:
+    - requested_slot: titel_selbstlernmaterial
+  - slot_was_set:
+    - titel_selbstlernmaterial: Lernen trotz Corona
+  - slot_was_set:
+    - requested_slot: bewertung_in_sterne
+  - slot_was_set:
+    - bewertung_in_sterne: 4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: bewertung_sterne_in_csv_ubertragen
+  - action: utter_vielen_dank_bewertung
+  - action: utter_weiter_weiterhelfen
+  - intent: goodbye
+  - action: action_konversation_sichern
+  #####
+- story: Suche nach Selbstlernmaterial Themenbreiche
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: bedingung_sprechstunde
+  - action: utter_bedingung_sprechstunde
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+  - intent: suche_nach_wissensgebiet
+    entities:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - slot_was_set:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - action: utter_eingrenzung_der_suche
+  - intent: suche_eingrenzen_anhand_themenbereiche
+  - action: utter_suche_eingrenzen_anhand_themenbreiche
+  - intent: suche_eingrenzen_welche_themenbereiche
+    entities:
+    - resource_kompetenz: Website
+  - slot_was_set:
+    - resource_kompetenz: Website
+  - action: action_query_datebase
+  - action: utter_alle_ergebnisse_anzeigen
+  - intent: nicht_alle_ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+  - intent: ja_ich_moechte_bewerten
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: form_bewertung_selbstlernmaterial
+  - slot_was_set:
+    - requested_slot: titel_selbstlernmaterial
+  - slot_was_set:
+    - titel_selbstlernmaterial: Lernen trotz Corona
+  - slot_was_set:
+    - requested_slot: bewertung_in_sterne
+  - slot_was_set:
+    - bewertung_in_sterne: 4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: bewertung_sterne_in_csv_ubertragen
+  - action: utter_vielen_dank_bewertung
+  - action: utter_weiter_weiterhelfen
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Suche nach Selbstlernmaterial Mediendidaktische Grundlagen
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: beantwortung_allgemeiner_fragen
+  - action: utter_beantwortung_allgemeiner_fragen
+  - intent: naechste_sprechstunde
+  - action: utter_naechste_sprechstunde
+  - intent: bedingung_sprechstunde
+  - action: utter_bedingung_sprechstunde
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+  - intent: suche_nach_wissensgebiet
+    entities:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - slot_was_set:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - action: utter_eingrenzung_der_suche
+  - intent: suche_eingrenzen_anhand_themenbereiche
+  - action: utter_suche_eingrenzen_anhand_themenbreiche
+  - intent: suche_eingrenzen_welche_themenbereiche
+    entities:
+    - resource_kompetenz: Moopaed-Kurs
+  - slot_was_set:
+    - resource_kompetenz: Moopaed-Kurs
+  - action: action_query_datebase
+  - action: utter_alle_ergebnisse_anzeigen
+  - intent: nicht_alle_ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+  - intent: ja_ich_moechte_bewerten
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: form_bewertung_selbstlernmaterial
+  - slot_was_set:
+    - requested_slot: titel_selbstlernmaterial
+  - slot_was_set:
+    - titel_selbstlernmaterial: Lernen trotz Corona
+  - slot_was_set:
+    - requested_slot: bewertung_in_sterne
+  - slot_was_set:
+    - bewertung_in_sterne: 4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: bewertung_sterne_in_csv_ubertragen
+  - action: utter_vielen_dank_bewertung
+  - action: utter_weiter_weiterhelfen
+  - intent: goodbye
+  - action: action_konversation_sichern
+- story: Story from Conversation ID b9f3e709317746848699cb4a89845daa
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+  - intent: suche_nach_wissensgebiet
+    entities:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - slot_was_set:
+    - resource_wissensgebiet: Grundlagen Mediendidaktik
+  - action: utter_eingrenzung_der_suche
+  - intent: suche_eingrenzen_anhand_format
+  - action: utter_suche_eingrenzen_anhand_format
+  - intent: suche_eingrenzen_welches_format
+    entities:
+    - resource_format: Moopaed-Kurs
+  - slot_was_set:
+    - resource_format: Moopaed-Kurs
+  - action: action_query_datebase
+  - action: utter_alle_ergebnisse_anzeigen
+  - intent: alle_ergebnisse_anzeigen
+  - action: action_query_datebase_alle_Ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+  - intent: ich_moechte_nicht_bewerten
+  - action: utter_ich_moechte_nicht_bewerten
+  - action: utter_weiter_weiterhelfen
+  - intent: goodbye
+  - action: action_konversation_sichern
+
+

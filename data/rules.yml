@@ -1,0 +1,103 @@
+version: "2.0"
+
+# Begrueßung und Verabschiedung
+rules:
+- rule: Say hello
+  steps:
+  - intent: greet
+  - action: action_begruessung_user
+
+- rule: Verabschiedung und Speicherung der Konversation
+  steps:
+  - intent: goodbye
+  - action: action_konversation_sichern  
+
+
+
+# Suche nach Selbstlernmaterialien
+- rule: suche selbstlernmaterialien
+  steps:
+  - intent: suche_selbstlernmaterialien
+  - action: utter_suche_selbstlernmaterialien
+
+
+- rule: Mögliche Wissensgebiete anzeigen
+  steps:
+  - intent: zeige_mir_moegliche_wissensgebiete
+  - action: utter_moegliche_wissensgebiet
+
+
+- rule: Ergebnisse einzeigen nach eingrenzung Themenbreich
+  steps:
+  - intent: suche_eingrenzen_anhand_themenbereiche
+  - action: utter_suche_eingrenzen_anhand_themenbreiche
+
+
+- rule: Database durchsuchen und fragen ob alle Ergebnisse anzeigen
+  steps:
+  - action: action_query_datebase
+  - action: utter_alle_ergebnisse_anzeigen
+
+
+- rule: Nicht alle Ergebnisse anzeigen 
+  steps:
+  - intent: nicht_alle_ergebnisse_anzeigen
+  - action: utter_bitte_um_bewertung
+
+
+
+# Bewertung von Selbstlernmaterialien
+
+- rule: um Bewertung bitten
+  steps:
+  - action: action_query_ohne_eingrenzung
+  - action: utter_bitte_um_bewertung
+
+
+- rule: Bewertung aktivieren
+  steps:
+  - intent: ja_ich_moechte_bewerten
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: form_bewertung_selbstlernmaterial
+
+- rule: Bewertung beenden
+  condition:
+  - active_loop: form_bewertung_selbstlernmaterial
+  steps: 
+  - action: form_bewertung_selbstlernmaterial
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: bewertung_sterne_in_csv_ubertragen
+  - action: utter_vielen_dank_bewertung
+  - action: utter_weiter_weiterhelfen
+
+
+- rule: nicht bewerten und kann ich dir sonst noch helfen
+  steps:
+  - action: utter_ich_moechte_nicht_bewerten
+  - action: utter_weiter_weiterhelfen
+
+
+
+# Fallbackschleife
+
+- rule: fallback nachfragen was gemeint wurde
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+
+
+- rule: Übergabe an TEgoDi-Team per Mail
+  steps: 
+  - action: action_default_fallback
+  - intent: out_of_scope
+  - action: action_default_mail_colilab
+  
+
+
+
+
+
+  
+

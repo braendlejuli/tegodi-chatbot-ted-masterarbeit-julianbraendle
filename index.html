@@ -1,0 +1,46 @@
+<html>
+   
+    <body background="Helpdesk_Moopaed_TEgoDi.png">
+    <style>
+        .rw-conversation-container .rw-header{background-color:hsl(0, 0%, 69%);}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: hsl(63, 99%, 43%);}
+        .rw-launcher{background-color: hsl(63, 99%, 43%);}{background-image: ted.svg}
+        .conversation-container .replies {display:block}
+        .rw-conversation-container .rw-reply{background-color: hsl(231, 87%, 68%); border: 1px solid hsl(231, 87%, 68%);}
+    </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005/",
+                    title: 'FRAG TED',
+                    subtitle: 'Sag Hallo um Ted zu begrüßen!',
+                    profileAvatar: "/Users/julianbrandle/Desktop/Rasa/testumgebung45/ted2.svg",
+                    openLauncherImage: "Users/julianbrandle/Desktop/Rasa/testumgebung45/speech.svg",
+                    closeImage: "Users/julianbrandle/Desktop/Rasa/testumgebung45/close.svg",
+                    showMessageDate: true,
+                    inputTextFieldHint: "Nachricht eingeben",
+                    customMessageDelay: (message) => {
+                      let delay = message.length * 40;
+                      if (delay > 3 * 1000) delay = 3 * 1000;
+                      if (delay < 800) delay = 800;
+                      return delay;
+                    }
+                    
+
+                    // add other props here
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+    </body>
+</html>
