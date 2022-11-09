@@ -90,6 +90,7 @@ class ActionDefaultFallbackColilab(Action):
 
 # 3) QueryDatabase - Eingrenzungen der Suche durch den User
 # Durchsuchung der SQLite Datenbank mit den jeweiligen Eingrenzungen
+# Achtung: Pfad zur database muss angepasst werden
 # Beispielcode: https://github.com/rctatman/personal_website_bot/blob/main/actions/actions.py
 #               https://www.python-lernen.de/csv-datei-einlesen.htm
 
@@ -107,7 +108,7 @@ class QueryDatabase(Action):
          Aufruf der einzelnen Methoden
          dispatcher: Rückgabe des Ergbnis im Chatfenster
          """
-         database = r"/Users/julianbrandle/Desktop/Rasa/testumgebung61/edu_db/selbstlernmaterialien.db"
+         database = r"/Users/julianbrandle/Desktop/Rasa/tegodi-chatbot-ted-masterarbeit-julianbraendle/edu_db/selbstlernmaterialien.db"
          conn = QueryDatabaseMethods.create_connection(database)
          slot_value = tracker.get_slot("resource_wissensgebiet")
          slot_value_format = tracker.get_slot("resource_format")         
@@ -210,6 +211,7 @@ class QueryDatabaseMethods:
 
 # 4) QueryDatabase - ohne Eingrenzungen der Suche 
 # Das Selbe wie oben, ohne Eingrenzung
+# Achtung: Pfad zur database muss angepasst werden
 # Bislang keine Möglichkeit gefunden, dies in QueryDatabase zu integrieren
 
 class QueryDatabase_ohne_eingrenzung(Action):
@@ -221,7 +223,7 @@ class QueryDatabase_ohne_eingrenzung(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         database = r"/Users/julianbrandle/Desktop/Rasa/testumgebung61/edu_db/selbstlernmaterialien.db"
+         database = r"/Users/julianbrandle/Desktop/Rasa/tegodi-chatbot-ted-masterarbeit-julianbraendle/edu_db/selbstlernmaterialien.db"
          conn = QueryDatabaseMethodsNoFilter.create_connection(database)
          slot_value = tracker.get_slot("resource_wissensgebiet")
 
@@ -292,6 +294,7 @@ class QueryDatabaseMethodsNoFilter:
 
 # 5) QueryDatabase - Alle Ergebnisse ausgeben
 # Selbe Methode wie oben um alle Ergebnisse anzuzeigen, wenn bereits drei Ergebnisse ausgegeben wurden
+# Achtung: Pfad zur database muss angepasst werden
 # Fehlende Umsetzung einer geeigneten Darstellung der Ergbnisse 
 # Bislang Rückgabe der unveränderten mehrdimensionalen Liste
 
@@ -304,7 +307,7 @@ class QueryDatabase(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         database = r"/Users/julianbrandle/Desktop/Rasa/testumgebung61/edu_db/selbstlernmaterialien.db"
+         database = r"/Users/julianbrandle/Desktop/Rasa/tegodi-chatbot-ted-masterarbeit-julianbraendle/edu_db/selbstlernmaterialien.db"
          conn = QueryDatabaseMethodsAlleErgebnisseSuche.create_connection(database)
          slot_value = tracker.get_slot("resource_wissensgebiet")
          slot_value_format = tracker.get_slot("resource_format")         
